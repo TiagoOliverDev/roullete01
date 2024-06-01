@@ -21,6 +21,17 @@
   background-repeat: no-repeat; /* Não repetir a imagem */
 }
 
+.bolinha {
+  position: absolute;
+  top: 50%; /* Centralizar verticalmente */
+  left: 50%; /* Centralizar horizontalmente */
+  transform: translate(-50%, -50%) translateX(140px); /* Ajustar baseado no raio da roda */
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+}
+
 
 
 

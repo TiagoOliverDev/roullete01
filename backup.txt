@@ -1,0 +1,70 @@
+.fundo-completo {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.roleta {
+  position: relative;
+  width: 300px; 
+  height: 300px; 
+}
+
+.roda {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.bolinha {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  background-color: silver;
+  border-radius: 50%;
+  transform: translate(-10px, -150px);
+  transform-origin: 10px 150px; 
+}
+
+
+
+
+
+
+
+import React, { useState } from 'react';
+import './roleta.css'; // Importe o CSS para estilização
+import roleta from './roleta01.png';
+import backgroundImg from './fundo01.jpg';
+
+function Roleta() {
+  const [anguloBolinha, setAnguloBolinha] = useState(0);
+  const premios = ["Prêmio 1", "Prêmio 2", "Prêmio 3", "Prêmio 4", "Prêmio 5"];
+
+  const girarBolinha = () => {
+    const novoAngulo = Math.floor(Math.random() * 360 + 360 * 5); // Gira no mínimo 5 vezes
+    setAnguloBolinha(novoAngulo);
+  };
+
+  return (
+    <div className="fundo-completo" style={{ backgroundImage: `url(${backgroundImg})`, width: '100vw', height: '100vh', backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+      <div className="roleta">
+        <img src={roleta} alt="Roleta" className="roda" />
+        <div className="bolinha"
+             style={{ transform: `rotate(${anguloBolinha}deg) translate(0, -50%)`, transformOrigin: 'center' }}
+             onAnimationEnd={() => alert(`Parou no prêmio: ${premios[Math.floor(anguloBolinha / 360) % premios.length]}`)}>
+        </div>
+        <button onClick={girarBolinha}>Girar Bolinha</button>
+      </div>
+    </div>
+  );
+}
+
+export default Roleta;

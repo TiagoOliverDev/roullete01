@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './roleta.css'; // Importe o CSS para estilização
-import roleta from './roleta01.png';
+import roleta from './toprolete.svg';
 import backgroundImg from './fundo01.jpg';
 
 function Roleta() {
