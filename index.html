@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Roleta de prêmios</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.55.2/dist/phaser.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <div id="dwheel"></div>
+        <div id="overlay">
+            <div id="modal-content">
+                <div id="winning-message" class="win-message" style="display: none;">
+                    <span>Você ganhou!</span> 
+                    <span>🎉</span>
+                </div>
+                <p 
+                    style="
+                        display: none;
+                        font-size: 57px;
+                        color: #FFFFFF;
+                        font-weight: 800; 
+                        text-shadow: 2px 2px 4px #000000;
+                    "
+                    id="title-win">...
+                </p>
+                <p 
+                    style="
+                        display: none;
+                        font-size: 33px;
+                        color: #FFFFFF;
+                        text-shadow: 2px 2px 4px #000000;
+                    "
+                    id="title-msg">...
+                </p>
+                <p 
+                    style="
+                        margin-top: 5%;
+                        display: none;
+                        font-size: 21px;
+                        color: #FFFFFF;
+                        text-shadow: 2px 2px 4px #000000;
+                    "
+                    id="msg">...
+                </p>
+                <p 
+                    style="
+                        font-size: 27px;
+                        color: #FFFFFF;
+                        text-shadow: 2px 2px 4px #000000;
+                    "
+                    id="modal-text">...
+                </p>
+                <button 
+                    id="modal-button"
+                    onclick="closeModal()">...
+                </button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

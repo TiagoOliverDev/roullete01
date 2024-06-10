@@ -1,0 +1,4 @@
+
+start servidor node com: npm install -g http-server
+
+rodar com: http-server -c-1
